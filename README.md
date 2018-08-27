@@ -90,8 +90,9 @@ bridge.invokeAuthorizeInWeb(params: object)
 
 **e.g. for returned decoded message**   
 
+```
 {"code":0,"type":1,"data":{"account":"eosiomeetone"}}
-
+```
 
 
 ### 2.invokeTransfer
