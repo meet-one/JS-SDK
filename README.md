@@ -94,8 +94,29 @@ bridge.invokeAuthorizeInWeb(params: object)
 {"code":0,"type":1,"data":{"account":"eosiomeetone"}}
 ```
 
+### 2.invokeAccountInfo
+Get current account info in MEET.ONE Wallet.
 
-### 2.invokeTransfer
+```
+bridge.invokeAccountInfo(params: object)
+```
+
+
+**params：**
+* none
+
+**return：**
+
+* `uri`: `String` The protocol of uri
+
+**e.g. for returned decoded message**   
+
+```
+{"code":0,"type":1,"data":{"account":"ifuckalibaba", "publicKey":"", "isOwner":true, "currencyBalance":"0.0001"}}
+```
+
+
+### 3.invokeTransfer
 Send a transfer request
 
 ```
@@ -124,7 +145,7 @@ bridge.invokeTransfer(params: object)
 ```
 
 
-### 3.invokeTransaction
+### 4.invokeTransaction
 Send a transaction request
 
 ```
