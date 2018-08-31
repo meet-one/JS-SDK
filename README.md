@@ -112,7 +112,7 @@ bridge.invokeAccountInfo(params: object)
 **e.g. for returned decoded message**   
 
 ```
-{"code":0,"type":1,"data":{"account":"ifuckalibaba", "publicKey":"", "isOwner":true, "currencyBalance":"0.0001"}}
+{"code":0,"type":2,"data":{"account":"ifuckalibaba", "publicKey":"", "isOwner":true, "currencyBalance":"0.0001"}}
 ```
 
 
