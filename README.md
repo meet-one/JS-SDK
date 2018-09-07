@@ -12,7 +12,7 @@ This library is used to assist to generating the protocol URI of the client, and
 
 ```    
 <!-- import meet.one bridge library -->
-<script src="https://cdn.jsdelivr.net/npm/meet-bridge@1.0.8/dist/meet-bridge.umd.min.js"></script>    
+<script src="https://cdn.jsdelivr.net/npm/meet-bridge@1.0.9/dist/meet-bridge.umd.min.js"></script>    
 ```
 
 or    
@@ -65,7 +65,7 @@ document.getElementById('decode').innerHTML = decodeURIComponent(atob(params));
 
 * `code`: `Int` success = 0，failure != 0  
 
-* `type`: `Int`transfer = 0;authorize = 1;getAccountInfo = 2;getBalance = 3;getWalletList = 4;pushTransactions = 5;   
+* `type`: `Int`transfer = 0;authorize = 1;getAccountInfo = 2;getBalance = 3;getWalletList = 4;pushTransactions = 5;getSignature = 6;   
 
 * `data`: `Object` detail datas from different methods    
 
@@ -183,6 +183,33 @@ bridge.invokeTransaction(params: object)
 
 ```
 {"code":0,"type":5,"data":Object/*retured data in chain*/}
+```
+
+
+### 5.invokeSignature
+Get a custom signature
+
+```
+bridge.invokeSignature(params: object)
+```
+
+
+**params：**
+* `data`: `String` custom signature string
+
+**return：**
+
+* `uri`: `String` The protocol of uri
+
+
+**e.g. for returned decoded message**   
+
+```
+//success
+{"code":0,"type":6,"data":{"signature":"SIG_K1_KZUDvvbVjR1mZUoazS8VWPXFdonbsazt8jR9NGDnwb3wRQpAYZxw9Xpi6iBjinb4raozLX2pmkPYNZWYuxAmzgFTJigjZ5","account":"wujunchuan11","isOwner":true}}
+
+//failed
+{"code":500,"type":6,"data":{"origin":{"name":"AssertionError","actual":false,"expected":true,"operator":"==","message":"data is a required String or Buffer","generatedMessage":false},"message":"签名失败"}}
 ```
 
 
