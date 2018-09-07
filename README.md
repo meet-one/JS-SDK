@@ -7,6 +7,22 @@ This library is used to assist to generating the protocol URI of the client, and
 [DEMO](https://meet.one/test/index.html)
 
 ## GETTING STARTED  
+
+### How to import  
+
+```    
+<!-- import meet.one bridge library -->
+<script src="https://cdn.jsdelivr.net/npm/meet-bridge@1.0.8/dist/meet-bridge.umd.min.js"></script>    
+```
+
+or    
+
+```    
+npm i meet-bridge
+```    
+
+
+
 ### How to generate protocol uri
 The following is an example of how to generate protocol uri to ask for authorize
 
