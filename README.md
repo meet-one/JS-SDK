@@ -12,7 +12,7 @@ This library is used to assist to generating the protocol URI of the client, and
 
 ```    
 <!-- import meet.one bridge library -->
-<script src="https://cdn.jsdelivr.net/npm/meet-bridge@1.0.9/dist/meet-bridge.umd.min.js"></script>    
+<script src="https://cdn.jsdelivr.net/npm/meet-bridge@1.0.10/dist/meet-bridge.umd.min.js"></script>    
 ```
 
 or    
@@ -210,6 +210,31 @@ bridge.invokeSignature(params: object)
 
 //failed
 {"code":500,"type":6,"data":{"origin":{"name":"AssertionError","actual":false,"expected":true,"operator":"==","message":"data is a required String or Buffer","generatedMessage":false},"message":"签名失败"}}
+```
+
+### 6.invokeBalance
+Get account token balance
+
+```
+bridge.invokeBalance(params: object)
+```
+
+
+**params：**
+* `contract`: `String` token contract,default is 'eosio.token'   
+* `symbol`: `String` token symbol,default is 'EOS'   
+* `accountName`: `String` default is wallet current account name   
+
+**return：**
+
+* `uri`: `String` The protocol of uri
+
+
+**e.g. for returned decoded message**   
+
+```
+//success
+{"code":0,"type":3,"data":{"accountName":"wujunchuan11","symbol":"EOS","contract":"eosio.token","balance":"0.0001"}}
 ```
 
 
