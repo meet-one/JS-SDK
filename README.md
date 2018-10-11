@@ -1,5 +1,9 @@
 # DApp JS-Bridge SDK
 
+MEET.ONE has supported Scatter protocol from the 1.3.0 version，so you can see the [Scatter Document](https://get-scatter.com/docs/dev/setting-up-for-web-apps)
+
+Below version 1.3.0 you can use MEET.ONE JS-Bridge.
+
 [The Bridge Library](https://meetone.gitlab.io/meet-bridge/) for Meet.ONE Client
 
 This library is used to assist to generating the protocol URI of the client, and encapsulates some common protocols and methods.
